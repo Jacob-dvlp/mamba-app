@@ -4,6 +4,8 @@
 > Desenvolvido como solução para o Desafio Técnico – Mamba Growth | Mobile Apps Division
 
 Apresentação: https://youtu.be/q8vPhekVPSs
+
+Link da play Store https://play.google.com/store/apps/details?id=com.mamba.mamba_fast_tracker
 ---
 
 ## 📱 Como rodar o projeto
