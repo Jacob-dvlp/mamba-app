@@ -31,7 +31,10 @@ class KpiCardCustomWidget extends StatelessWidget {
           Text(
             value,
             style: TextStyle(
-                color: color, fontWeight: FontWeight.bold, fontSize: 15),
+              color: color,
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),
           ),
           Text(
             label,

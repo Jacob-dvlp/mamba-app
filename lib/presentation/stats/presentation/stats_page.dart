@@ -45,8 +45,11 @@ class _StatsPageState extends State<StatsPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.error_outline_rounded,
-                        size: 48, color: theme.colorScheme.error),
+                    Icon(
+                      Icons.error_outline_rounded,
+                      size: 48,
+                      color: theme.colorScheme.error,
+                    ),
                     const SizedBox(height: 12),
                     Text(state.message),
                     const SizedBox(height: 16),

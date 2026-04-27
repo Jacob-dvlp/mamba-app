@@ -16,7 +16,6 @@ class MealsBody extends StatelessWidget {
     final color = theme.colorScheme.primary;
     final colors = theme.colorScheme;
 
-    final textSecondary = theme.colorScheme.onSurface.withOpacity(0.4);
     final textMuted = theme.colorScheme.onSurface.withOpacity(0.3);
 
     if (state.meals.isEmpty) {

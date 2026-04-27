@@ -27,8 +27,6 @@ class StatsBody extends StatelessWidget {
     final surface = theme.colorScheme.surface;
     final onSurface = theme.colorScheme.onSurface;
 
-    final activeColor = showFasting ? primary : primary;
-
     final fastingData = Map.fromEntries(
       state.weeklyFastingMinutes.entries.toList()
         ..sort((a, b) => a.key.compareTo(b.key)),
@@ -218,9 +216,11 @@ class StatsBody extends StatelessWidget {
                             ),
                           ),
                           rightTitles: const AxisTitles(
-                              sideTitles: SideTitles(showTitles: false)),
+                            sideTitles: SideTitles(showTitles: false),
+                          ),
                           topTitles: const AxisTitles(
-                              sideTitles: SideTitles(showTitles: false)),
+                            sideTitles: SideTitles(showTitles: false),
+                          ),
                           bottomTitles: AxisTitles(
                             sideTitles: SideTitles(
                               showTitles: true,

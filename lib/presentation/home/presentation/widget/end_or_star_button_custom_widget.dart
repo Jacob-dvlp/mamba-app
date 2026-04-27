@@ -101,7 +101,6 @@ class EndOrStartButtonCustomWidget extends StatelessWidget {
     showDialog(
       context: context,
       builder: (_) => AlertDialog(
-        // ❌ remove backgroundColor manual
         title: Text(
           'Encerrar jejum?',
           style: theme.textTheme.titleLarge,

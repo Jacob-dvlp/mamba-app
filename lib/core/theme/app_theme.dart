@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 class AppTheme {
   AppTheme._();
 
-  // ───────────────────────── COLORS ─────────────────────────
   static const Color kBg = Color(0xFF0D0D0D);
   static const Color kCard = Color(0xFF1A1A1A);
   static const Color kGreen = Color(0xFF4CAF50);
@@ -22,7 +21,6 @@ class AppTheme {
   static const Color kWhite = Color(0xFFFFFFFF);
   static const Color kBlack = Color(0xFF000000);
 
-  // ───────────────────────── DARK ─────────────────────────
   static ThemeData get dark {
     const scheme = ColorScheme(
       brightness: Brightness.dark,
@@ -81,7 +79,6 @@ class AppTheme {
     );
   }
 
-  // ───────────────────────── LIGHT ─────────────────────────
   static ThemeData get light {
     const scheme = ColorScheme(
       brightness: Brightness.light,

@@ -23,7 +23,6 @@ import '../../services/i_notification_service.dart';
 import '../../services/notification_service.dart';
 
 import '../hive/hive_constants.dart';
-import '../theme/theme_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -73,7 +72,6 @@ Future<void> setupDependencies() async {
   sl.registerFactory(() => GetDailyLogUseCase(sl(), sl()));
   sl.registerFactory(() => GetWeeklyCaloriesUseCase(sl()));
 
-  // ── Cubits ─────────────────────────────────────────────────
   sl.registerFactory<AuthCubit>(
     () => AuthCubit(
       signIn: sl(),
@@ -103,7 +101,6 @@ Future<void> setupDependencies() async {
       weeklyCalories: sl(),
     ),
   );
-  sl.registerFactory<ThemeCubit>(() => ThemeCubit());
 
   await sl<INotificationService>().initialize();
 }

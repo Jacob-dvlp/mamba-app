@@ -19,7 +19,6 @@ class ToggleBtn extends StatelessWidget {
 
     final activeColor = colorScheme.primary;
     final inactiveTextColor = colorScheme.onSurface.withOpacity(0.6);
-
     return Expanded(
       child: GestureDetector(
         onTap: onTap,

@@ -15,10 +15,8 @@ class StatsLoading extends StatsState {
 }
 
 class StatsLoaded extends StatsState {
-  /// key = dia (DateTime sem hora), value = minutos de jejum
   final Map<DateTime, int> weeklyFastingMinutes;
 
-  /// key = dia (DateTime sem hora), value = calorias totais
   final Map<DateTime, int> weeklyCalories;
 
   const StatsLoaded({

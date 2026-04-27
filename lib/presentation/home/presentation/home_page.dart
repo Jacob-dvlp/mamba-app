@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:mamba_fast_tracker/presentation/auth/cubit/auth_cubit.dart';
 import '../../../core/theme/app_theme.dart';
-import '../../../core/theme/theme_cubit.dart';
 import '../../../core/utils/date_utils.dart';
 import '../cubit/fast_cubit.dart';
 import '../../widgets/main_nav_shell.dart';

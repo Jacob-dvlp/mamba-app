@@ -21,12 +21,14 @@ class StatsCubit extends Cubit<StatsState> {
     try {
       final sessions = await _weeklySessions();
       final calories = await _weeklyCalories();
-      emit(StatsLoaded(
-        weeklyFastingMinutes: sessions.map(
-          (key, value) => MapEntry(key, value.inMinutes),
+      emit(
+        StatsLoaded(
+          weeklyFastingMinutes: sessions.map(
+            (key, value) => MapEntry(key, value.inMinutes),
+          ),
+          weeklyCalories: calories,
         ),
-        weeklyCalories: calories,
-      ));
+      );
     } catch (e) {
       emit(StatsError(e.toString()));
     }

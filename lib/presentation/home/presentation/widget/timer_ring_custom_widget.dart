@@ -2,7 +2,6 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/theme/app_theme.dart';
 import '../../../../core/utils/date_utils.dart';
 import '../../../../domain/entities/fast_session_entity.dart';
 import '../../cubit/fast_cubit.dart';
@@ -42,7 +41,7 @@ class TimerRingCustomWidget extends StatelessWidget {
         ? colors.primary
         : state is FastActive &&
                 (state as FastActive).session.status == FastStatus.paused
-            ? colors.tertiary // laranja adaptado ao theme
+            ? colors.tertiary 
             : colors.primary;
 
     final trackColor = colors.outlineVariant;
@@ -151,7 +150,6 @@ class _RingPainter extends CustomPainter {
     final radius = (size.shortestSide - strokeWidth) / 2;
     final rect = Rect.fromCircle(center: Offset(cx, cy), radius: radius);
 
-    // Track
     canvas.drawArc(
       rect,
       0,
@@ -168,7 +166,6 @@ class _RingPainter extends CustomPainter {
       final glowOpacity = brightness == Brightness.dark ? 0.25 : 0.12;
       final blurSigma = brightness == Brightness.dark ? 8.0 : 4.0;
 
-      // Glow
       canvas.drawArc(
         rect,
         -math.pi / 2,
@@ -182,7 +179,6 @@ class _RingPainter extends CustomPainter {
           ..maskFilter = MaskFilter.blur(BlurStyle.normal, blurSigma),
       );
 
-      // Progress
       canvas.drawArc(
         rect,
         -math.pi / 2,

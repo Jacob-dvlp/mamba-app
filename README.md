@@ -10,25 +10,17 @@
 ### Pré-requisitos
 - Flutter SDK `>=3.3.0`
 - Android SDK / Emulador ou dispositivo físico Android
-- Conta Firebase (para Auth)
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/mamba_fast_tracker.git
-cd mamba_fast_tracker
+git clone https://github.com/Jacob-dvlp/mamba-app.git
+cd mamba-app
 ```
 
 ### 2. Instale as dependências
 ```bash
 flutter pub get
 ```
-
-### 3. Configure o Firebase
-
-1. Crie um projeto no [Firebase Console](https://console.firebase.google.com)
-2. Ative **Authentication → Email/Senha**
-3. Adicione o app Android (package: `com.mamba.fast_tracker`)
-4. Baixe o `google-services.json` e coloque em `android/app/`
 
 > O app usa `firebase_core` e `firebase_auth`. Não há Firestore — todos os dados ficam locais (Hive).
 
@@ -83,6 +75,7 @@ lib/
 │   ├── history/        # Histórico 30 dias + HistoryCubit
 │   └── stats/          # Gráficos semanais + StatsCubit
 └── services/           # NotificationService
+└── teste/              # Teste unitarios
 ```
 
 ## ⚙️ Decisões técnicas
@@ -162,12 +155,5 @@ Usei **Cubit** (sem `on<Event>`) pois os estados das features são simples e dir
 | 4 | Polish, README, build APK | ~3h |
 | **Total** | | **~22h** |
 
----
 
-## 📲 APK
-
-O APK release está disponível em `/releases` no repositório ou pode ser gerado com:
-
-```bash
-flutter build apk --release
 ```

@@ -29,7 +29,6 @@ class _HistoryPageState extends State<HistoryPage> {
       child: BlocBuilder<HistoryCubit, HistoryState>(
         bloc: context.read<HistoryCubit>(),
         builder: (context, state) {
-          // Detalhe do dia: usa Navigator.push interno para manter o bottom nav
           if (state is HistoryDayDetail) {
             return DayDetailsScaffoldCustomWidget(log: state.log);
           }
