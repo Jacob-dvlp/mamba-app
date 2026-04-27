@@ -3,7 +3,7 @@
 > Aplicativo de controle de jejum intermitente + registro de calorias
 > Desenvolvido como solução para o Desafio Técnico – Mamba Growth | Mobile Apps Division
 
-https://github.com/Jacob-dvlp/mamba-app/blob/master/WhatsApp%20Image%202026-04-27.36.53%20PM.jpeg
+Apresentação: https://youtu.be/q8vPhekVPSs
 ---
 
 ## 📱 Como rodar o projeto
