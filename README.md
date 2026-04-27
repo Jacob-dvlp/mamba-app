@@ -54,6 +54,7 @@ flutter build apk --release
 | Gráficos | `fl_chart` |
 | Igualdade de entidades | `equatable` |
 | IDs únicos | `uuid` |
+| Shorebird | Play Store
 
 ---
 
@@ -104,6 +105,11 @@ O router usa `redirect` + `refreshListenable` conectado ao stream do `AuthCubit`
 ### Cubit vs Bloc
 Usei **Cubit** (sem `on<Event>`) pois os estados das features são simples e diretos. Cubit reduz boilerplate sem perder testabilidade — métodos públicos são fáceis de mockar em testes unitários.
 
+ ### Shorebird (Code Push / Hotfix de produção)
+
+Usei o Shorebird para permitir atualizações de código em produção sem necessidade de reinstalar o app pela Play Store. Ele funciona aplicando patches incrementais no Flutter, permitindo corrigir bugs e entregar melhorias de forma rápida.
+
+Isso reduz drasticamente o tempo de resposta para correções críticas e evita ciclos longos de review na store, mantendo o app sempre atualizado de forma segura e controlada.
 ---
 
 ## 📦 Bibliotecas utilizadas
@@ -142,7 +148,6 @@ Usei **Cubit** (sem `on<Event>`) pois os estados das features são simples e dir
 - **Testes unitários** para todos os UseCases e Cubits
 - **Firestore** para sincronização entre dispositivos com merge offline-first
 - **CI/CD** com GitHub Actions: lint + testes + build APK automático
-- **Firebase Analytics + Crashlytics** para monitoramento em produção
 - **Feature Flags** via Firebase Remote Config
 - **Widget de onboarding** para novos usuários
 
